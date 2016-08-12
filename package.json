@@ -3,8 +3,7 @@
   "description": "Q language support in Atom",
   "version": "0.0.0",
   "engines": {
-    "atom": "*",
-    "node": "*"
+    "atom": "*"
   },
   "homepage": "https://github.com/bingohuang/language-q",
   "repository": {
@@ -13,5 +12,6 @@
   },
   "bugs": {
     "url": "https://github.com/bingohuang/language-q/issues"
-  }
+  },
+  "license": "MIT"
 }

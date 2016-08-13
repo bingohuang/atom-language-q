@@ -1,7 +1,7 @@
 'scopeName': 'source.q'
 'name': 'Qlang'
 'comment': 'Q language'
-'fileTypes': ['ql']
+'fileTypes': ['ql', 'qlang']
 
 'foldingStartMarker': '({|\\()\\s*$'
 'foldingStopMarker': '(}|\\))\\s*$'
@@ -89,12 +89,12 @@
   }
   {
     'comment': 'Built-in functions'
-    'match': '\\b(append|cap|close|complex|copy|delete|imag|len|make|new|panic|print|println|real|recover)\\b(?=\\()'
+    'match': '\\b(_init|append|cap|close|complex|copy|delete|imag|len|make|main|new|panic|print|println|real|recover)\\b(?=\\()'
     'name': 'support.function.builtin.q'
   }
   {
     'comment': 'Function declarations'
-    'match': '^(\\bfunc\\b)(?:\\s+(\\([^\\)]+\\)\\s+)?([a-zA-Z_]\\w*)(?=\\())?'
+    'match': '^(\\bfn\\b)(?:\\s+(\\([^\\)]+\\)\\s+)?([a-zA-Z_]\\w*)(?=\\())?'
     'captures':
       '1':
         'name': 'keyword.function.q'
@@ -108,11 +108,11 @@
           }
         ]
       '3':
-        'name': 'entity.name.function'
+        'name': 'entity.name.function.q'
   }
   {
     'comment': 'Functions'
-    'match': '(\\bfunc\\b)|([a-zA-Z_]\\w*)(?=\\()'
+    'match': '(\\bfn\\b)|([a-zA-Z_]\\w*)(?=\\()'
     'captures':
       '1':
         'name': 'keyword.function.q'
@@ -269,7 +269,7 @@
     'patterns': [
       {
         'comment': 'Flow control keywords'
-        'match': '\\b(break|case|continue|default|defer|else|fallthrough|for|go|goto|if|range|return|select|switch)\\b'
+        'match': '\\b(break|case|continue|default|defer|else|fallthrough|for|go|goto|if|new|range|return|select|switch)\\b'
         'name': 'keyword.control.q'
       }
       {
@@ -281,7 +281,7 @@
         'name': 'keyword.const.q'
       }
       {
-        'match': '\\bfunc\\b'
+        'match': '\\bfn\\b'
         'name': 'keyword.function.q'
       }
       {
@@ -311,6 +311,10 @@
       {
         'match': '\\bvar\\b'
         'name': 'keyword.var.q'
+      }
+      {
+        'match': '\\this\\b'
+        'name': 'keyword.this.q'
       }
     ]
   'operators':
@@ -397,6 +401,10 @@
       {
         'match': '\\buintptr\\b'
         'name': 'storage.type.uintptr.q'
+      }
+      {
+        'match': '\\bclass\\b'
+        'name': 'storage.type.class.q'
       }
     ]
   'string_escaped_char':

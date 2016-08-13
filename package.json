@@ -5,13 +5,13 @@
   "engines": {
     "atom": "*"
   },
-  "homepage": "https://github.com/bingohuang/language-q",
+  "homepage": "https://github.com/bingohuang/atom-language-q",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bingohuang/language-q.git"
+    "url": "https://github.com/bingohuang/atom-language-q.git"
   },
   "bugs": {
-    "url": "https://github.com/bingohuang/language-q/issues"
+    "url": "https://github.com/bingohuang/atom-language-q/issues"
   },
   "license": "MIT"
 }
